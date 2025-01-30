@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cita de Valoración - LEONORA</title>
+    <link rel="stylesheet" href="EstilosHtml/EstiloCssReservaciones.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">LEONORA</div>
+        <div class="nav-links">
+            <a href="#">Productos</a>
+            <a href="#" class="active">Cita de valoración</a>
+            <a href="#">Sucursales</a>
+        </div>      
+    </nav>
+
+    <div class="main-content">
+        <!-- Galería de miniaturas -->
+        <div class="thumbnail-gallery">
+            <img src="imagenes/FotoReservacion1.png" alt="Thumbnail 1" class="thumbnail">
+            <img src="imagenes/FotoReservacion2.png" alt="Thumbnail 2" class="thumbnail">
+            <img src="imagenes/FotoReservacion3.png" alt="Thumbnail 3" class="thumbnail">
+        </div>
+
+        <!-- Imagen principal -->
+        <div class="main-image">
+            <img src="imagenes/FotoReservacion1.png" alt="Main Image">
+        </div>
+        
+        <div class="product-info">
+            <h1>Cita de Valoración - Coyoacán</h1>
+            <div class="brand">Leonora Studio</div>        
+
+            <div id="step-1" class="form-step">
+                <center><h3>Datos del Cliente</h3></center><br><br>
+                <label>Nombre del Cliente:</label>
+                <input type="text" id="nombre" required><br><br>
+                <label>Número Telefónico:</label>
+                <input type="tel" id="telefono" required><br><br>
+                <label>Correo Electrónico (opcional):</label>
+                <input type="email" id="correo"><br><br>
+                <button onclick="nextStep(1)">Siguiente</button><br><br>
+            </div>
+
+            <div id="step-2" class="form-step" style="display: none;">
+                <center><h3>Detalles del Servicio</h3></center><br><br>
+                <label>Servicio a realizar:</label>
+                <select id="servicio">
+                    <option>Corte de cabello</option>
+                    <option>Aplicación de tinte</option>
+                    <option>Manicure</option>
+                    <option>Pedicure</option>
+                </select><br><br>
+                <label>Lugar a realizar el servicio:</label>
+                <select id="lugar">
+                    <option>Coyoacán</option>
+                    <option>Polanco</option>
+                    <option>Coapa</option>
+                    <option>Colonia del Valle</option>
+                </select><br><br>
+                <label>Precio del servicio:</label>
+                <input type="text" id="precio" readonly><br><br>
+                <button onclick="prevStep(1)">Anterior</button>
+                <button onclick="nextStep(2)">Siguiente</button><br><br>
+            </div>
+
+
+            <div id="step-3" class="form-step" style="display: none;">
+                <center><h3>Fecha y Hora</h3></center><br><br>
+                <label>Fecha:</label>
+                <input type="date" id="fecha" required><br><br>
+                <label>Horario:</label>
+                <input type="time" id="horario" required><br><br>
+                <button onclick="prevStep(2)">Anterior</button>
+                <button onclick="nextStep(3)">Siguiente</button><br><br>
+            </div>
+            
+            <div id="step-4" class="form-step" style="display: none;">
+                <center><h3>Confirmación de Pago</h3></center><br><br>
+                <label>Total a pagar:</label>
+                <input type="text" id="total" readonly><br><br>
+                <label>Número de Tarjeta de Crédito:</label>
+                <input type="text" id="tarjeta" required><br><br>
+                <button onclick="prevStep(3)">Anterior</button>
+                <button id="finalizar" onclick="validarFormulario()">Finalizar</button><br><br>
+            </div>
+            
+            <div id="confirmacion" class="form-step" style="display: none;">
+                <h3>Cita Programada</h3>
+                <p>Tu cita ha sido programada exitosamente.</p>
+            </div>
+
+            
+
+            <!-- Sección Descripción -->
+            <div class="toggle-section">
+                <h3 class="section-title">
+                    Descripción
+                    <span class="toggle-icon">+</span>
+                </h3>
+                <div class="section-content">
+                    <p>
+                        El secreto de un corte o tratamiento de belleza exitoso es conocerte y saber con exactitud qué necesitas. Tu cabello, tu piel y tu belleza son únicos. Solicita una cita de valoración y descubre lo que podemos hacer por ti.
+                    </p><br>
+                    <p>
+                        Revisaremos el estado y la calidad cosmética de tu cabello y te diremos con certeza si el procedimiento o tratamiento que deseas es posible y seguro para ti. También conocerás todo el proceso y el costo asociado.
+                    </p><br>
+                    <p>
+                        Conoce a nuestros estilistas y micropigmentadores y la forma en que realizan su trabajo. Vive la experiencia de un servicio profesional diseñado para satisfacer tus más altas expectativas.
+                    </p><br>
+                    <p>
+                        ¿Quieres sentirte 100 % tranquila sobre el tratamiento o procedimiento que deseas? Puedes solicitar una prueba de alergia (costo extra) o diseño de ceja (costo previo) en caso de un servicio de micropigmentación.
+                    </p><br>
+                    <p>
+                        En tu cita de valoración recibirás asesoría de 30 minutos y una cotización. Incluso una prueba de mechón en caso de ser necesaria. Los $500 se tomarán a cuenta si te realizas el servicio o se perderán en caso de "no show" / "no presentarte" a tu cita de valoración.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sección Información importante para tu cita -->
+            <div class="toggle-section">
+                <h3 class="section-title">
+                    Información importante para tu cita
+                    <span class="toggle-icon">+</span>
+                </h3>
+                <div class="section-content">
+                    <p>
+                        1.- Nuestras citas tienen tolerancia de 10 min
+                    </p><br>
+                    <p>
+                        2.- Evita traer acompañantes (nuestros espacios no tienen salas de espera)
+                    </p><br>
+                    <p>
+                        3.- Evita traer ropa, prendas o accesorios delicados, trabajamos con decolorantes y peróxidos. ( no nos hacemos responsables de artículo dañados).
+                    </p><br>
+                    <p>
+                        4.- En caso de Valoración de servicios de cabello, debes presentarte con el cabello limpio y seco, sin cremas, fijadores etc.
+                    </p><br>
+                    <p>
+                        5.- Si no te presentas a tu cita en el horario reservado se perderá el saldo por concepto de NO SHOW y no es reembolsable.
+                    </p><br>
+                    <p>
+                        6.- Si al terminar tu valoración de cabello decides realizarte el servicio, el saldo de los $500 se descontará de tu presupuesto.
+                    </p><br>
+                    <p>
+                        7.- En la Valoración de calbello, si al terminar tu valoración decides no realizarte el servicio, el saldo de los $500 los podrás cambiar por producto u algún otro servicio. El saldo NO ES REEMBOLSABLE
+                    </p><br>
+                    <p>
+                        8.- En la Valoración de cabello, en caso de realizar prueba de mechón y debamos cubrirla, se tomarán los $500 de saldo de la reserva de la cita de valoración.
+                    </p><br>
+                    <p>
+                        9.- En la cita de valoración de Microblading hacemos diseño y prueba de sencibilidad, los $500 no se reembolsan ni forman parte del servicio de Microblading en caso de realizarlo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sección ¿Cuándo lo recomendamos? -->
+            <div class="toggle-section">
+                <h3 class="section-title">
+                    ¿Cuándo lo recomendamos?
+                    <span class="toggle-icon">+</span>
+                </h3>
+                <div class="section-content">
+                    <p>
+                        Si buscas sentirte 100 % tranquila sobre el tratamiento o procedimiento que deseas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad para cambiar la imagen principal al hacer clic en una miniatura
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.querySelector('.main-image img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+            });
+        });
+
+        // Funcionalidad para desplegar y contraer secciones
+        const toggleSections = document.querySelectorAll('.toggle-section');
+
+        toggleSections.forEach(section => {
+            const title = section.querySelector('.section-title');
+            const content = section.querySelector('.section-content');
+            const icon = section.querySelector('.toggle-icon');
+
+            title.addEventListener('click', () => {
+                content.classList.toggle('show');
+                icon.textContent = content.classList.contains('show') ? '−' : '+';
+            });
+        });        
+    </script>
+
+    <script>
+        // Lista de precios por servicio
+        const preciosServicios = {
+            "Corte de cabello": 50.00,
+            "Aplicación de tinte": 85.00,
+            "Manicure": 40.00,
+            "Pedicure": 45.00
+        };
+
+        document.getElementById("servicio").addEventListener("change", function() {
+            let servicioSeleccionado = this.value;
+            let precioCampo = document.getElementById("precio");
+            let totalCampo = document.getElementById("total");
+
+            // Asignar el precio correspondiente
+            if (servicioSeleccionado in preciosServicios) {
+                let precio = preciosServicios[servicioSeleccionado].toFixed(2);
+                precioCampo.value = `$${precio}`;
+                totalCampo.value = `$${precio}`;
+            } else {
+                precioCampo.value = "";
+                totalCampo.value = "";
+            }
+        });
+
+        // Función para validar que todos los campos estén llenos
+        function validarFormulario() {
+            let nombre = document.getElementById("nombre").value.trim();
+            let telefono = document.getElementById("telefono").value.trim();
+            let fecha = document.getElementById("fecha").value.trim();
+            let servicio = document.getElementById("servicio").value;
+            let precio = document.getElementById("precio").value.trim();
+            let total = document.getElementById("total").value.trim();
+
+            if (nombre === "" || telefono === "" || fecha === "" || servicio === "" || precio === "" || total === "") {
+                alert("Por favor, completa todos los campos antes de finalizar.");
+                return false;
+            }
+
+            alert("¡Cita agendada con éxito!");
+            location.reload();
+            return true;
+        }
+
+        // Asignar la función al botón de finalizar
+        document.getElementById("finalizar").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+            validarFormulario();
+        });
+    </script>
+
+
+
+
+
+    <script>
+        function nextStep(step) {
+            // Ocultar el paso actual
+            document.querySelector('.form-step:not([style*="display: none"])').style.display = 'none';
+            
+            // Mostrar el siguiente paso
+            document.getElementById(`step-${step + 1}`).style.display = 'block';
+        }
+
+        function prevStep(step) {
+            // Ocultar el paso actual
+            document.querySelector('.form-step:not([style*="display: none"])').style.display = 'none';
+            
+            // Mostrar el paso anterior
+            document.getElementById(`step-${step}`).style.display = 'block';
+        }
+    </script>
+
+     <!-- New Services Section -->
+     <section class="services-section">
+        <div class="services-container">
+            <div class="service-item">
+                <span class="ep--van"></span><br>
+                <h3>ENVÍOS</h3>
+                <p>Envío gratis a partir de $900</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--service"></span><br>
+                <h3>AGENDAR EN LÍNEA</h3>
+                <p>Agenda en línea tu servicio</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--chat-dot-round"></span><br>
+                <h3>AGENDAR POR MENSAJE</h3>
+                <p>Escríbenos por Whatsapp para agendar</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--phone"></span><br>
+                <h3>AGENDAR POR TELÉFONO</h3>
+                <p>Llámanos para agendar tu cita</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LEONORA STUDIO</h4>
+                <ul>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Franquicias</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ATENCIÓN A CLIENTE</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Información de envíos</a></li>
+                    <li><a href="#">Política de devoluciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACTO</h4>
+                <ul>
+                    <li><a href="#">Nuestras Sucursales</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li>WP. 55 4507 9944</li>
+                    <li>T. +52 55 7577 8358</li>
+                    <li>D. 1ª Cerrada Xola #30, Col. del Valle, CDMX.</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>NEWSLETTER</h4>
+                <p>Suscríbete a nuestro Newsletter y obtén el 10% de descuento en tu primera compra.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Correo electrónico">
+                    <button>→</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><span class="bxl--facebook"></span></a>
+                    <a href="#"><span class="bxl--instagram"></span></a>
+                    <a href="#"><span class="bxl--tiktok"></span></a>
+                    <a href="#"><span class="bxl--youtube"></span></a>
+                    <a href="#"><span class="bxl--messenger"></span></a>
+                    <a href="#"><span class="bxl--pinterest-alt"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </footer>
+</body>
+</html>
