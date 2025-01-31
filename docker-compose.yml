@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Servicio para la base de datos (PostgreSQL)
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: leonora
+
+  # Servicio para el backend (Node.js)
+  backend:
+    build: ./codigo  # Actualizado de ./backend a ./codigo
+    container_name: backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./codigo:/app  # Actualizado de ./backend a ./codigo
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://root:password@postgres:5432/leonora
+    depends_on:
+      - postgres
+
+# Volumen para persistir datos de PostgreSQL
+volumes:
+  postgres_data:
