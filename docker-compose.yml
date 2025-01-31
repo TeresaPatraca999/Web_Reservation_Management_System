@@ -17,12 +17,12 @@ services:
 
   # Servicio para el backend (Node.js)
   backend:
-    build: ./codigo  # Actualizado de ./backend a ./codigo
+    build: ./backend
     container_name: backend
     ports:
       - "3000:3000"
     volumes:
-      - ./codigo:/app  # Actualizado de ./backend a ./codigo
+      - ./backend:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development
