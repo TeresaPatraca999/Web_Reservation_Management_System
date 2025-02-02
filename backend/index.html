@@ -12,6 +12,15 @@
             font-family: Arial, sans-serif;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgb(215, 179, 171);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
         .top-banner {
             background-color: rgb(215, 179, 171);
             color: black;
@@ -22,20 +31,13 @@
         .top-banner a {
             color: black;
             text-decoration: underline;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+        }        
 
         .logo {
             font-weight: bold;
             font-size: 24px;
+            border: 2px solid black;
+            padding: 5px 10px;
         }
 
         .nav-links {
@@ -45,55 +47,18 @@
 
         .nav-links a {
             text-decoration: none;
-            color: black;
-        } 
-
-        .hero {
-            position: relative;
-            height: 80vh;
-            background-image: url('/api/placeholder/1920/1080');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding: 0 50px;
+            color: black;   /* Cambiar el color de "Cita de valoracion" */
         }
 
-        .hero-content {
-            color: black;
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 20px;
-        }
+        .nav-links a.active {
+            color: rgb(19, 19, 19);
+        }             
 
         .btn {
             padding: 15px 30px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-        }
-
-        .btn-white {
-            background-color: white;
-            color: black;
-        }
-
-        .btn-black {
-            background-color: black;
-            color: white;
         }
 
         .slider-controls {
@@ -116,31 +81,163 @@
             justify-content: center;
             cursor: pointer;
         }
+
+        .hero-section {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-section2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - 70px);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+            z-index: 1;
+        }
+
+        .hero-content {
+            background: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: black;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: black;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content {
+                padding: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .agendar-hero-btn {
+            background: black;
+            color: white;
+            padding: 0.8rem 3rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            width: auto;
+        }
+
+        .agendar-hero-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .hero-content2 {
+            background: #F6E9E5;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .hero-content2 h1 {
+            font-size: 4rem;
+            color: black;
+            line-height: 1.1;
+            font-weight: 500;
+        }
+
+        .hero-content2 p {
+            font-size: 1.2rem;
+            color: black;
+            line-height: 1.5;
+        }
+
+        .ver-todas-btn {
+            background: black;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            width: fit-content;
+            font-weight: 500;
+        }
+
+        .hero-image2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
-    <div class="top-banner">
-        Reserva tu próxima cita en línea con nosotros <a href="#">Click aquí ></a>
-    </div>
     
-    <nav>        
+    <nav>
         <div class="logo">LEONORA</div>
         <div class="nav-links">
-            <a href="#">Nuestros Servicios</a>
-            <a href="Reservaciones.html">Reservaciones</a>
-            <a href="#">Acerca de Nosotros</a>
+            <a href="Productos.html">Productos</a>
+            <a href="Reservaciones.html">Citas</a>
+            <a href="sucursales.html" class="active">Sucursales</a>
         </div>     
     </nav>
 
-    <div class="hero">
+    <section class="hero-section">
+        <img src="/Imagenes/inicio1.png" alt="Salon interior" class="hero-image" />
         <div class="hero-content">
-            <h1>¡Los mejores cambios de look!</h1>
-            <p>Reserva tu cita y descubre nuestra Magia</p>
-            <div class="button-group">
-                <a href="#" class="btn btn-white">Productos</a>
-                <a href="#" class="btn btn-black">Agendar Cita</a>
-            </div>
-        </div>    
-    </div>
+            <h1>Cita de valoración</h1>
+            <p>Agenda con nosotros tu cita de valoración para entender cuáles son tus necesidades. De la mano de expertos.</p>
+            <a href="Reservaciones.html" class="agendar-hero-btn">Agendar</a>
+        </div>
+    </section>
+
+    <section class="hero-section2">
+        <div class="hero-content2">
+            <h1>Conoce nuestras Sucursales</h1>
+            <p>Encuentra la que esté más cerca de tu hogar y ¡Visítanos!</p>
+            <a href="sucursales.html" class="ver-todas-btn">Ver todas</a>
+        </div>
+        <img src="/Imagenes/inicio2.png" alt="Interior de sucursal" class="hero-image2" />
+    </section>
+
 </body>
 </html>

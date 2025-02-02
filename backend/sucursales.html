@@ -4,241 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursales - LEONORA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Previous styles remain the same */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-            border: 2px solid black;
-            padding: 5px 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .nav-links a.active {
-            color: rgb(215, 179, 171);
-        }            
-
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        h1 {
-            font-size: 48px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 60px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .branches {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .branch {
-            display: flex;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .branch-image {
-            width: 40%;
-            object-fit: cover;
-        }
-
-        .branch-info {
-            padding: 30px;
-            width: 60%;
-        }
-
-        .branch-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: start;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .schedule {
-            margin: 15px 0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: black;
-            text-decoration: underline;
-        }
-
-        /* New Footer Styles */
-        .services-section {
-            background: #f9f9f9;
-            padding: 40px 0;
-            border-top: 1px solid #eee;
-        }
-
-        .services-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .service-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 250px;
-        }
-
-        .service-item img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 15px;
-        }
-
-        .service-item h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-
-        .service-item p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        footer {
-            background: white;
-            padding: 60px 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
-
-        .footer-section h4 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section ul li a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .footer-section p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 10px;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .newsletter-form button {
-            padding: 10px 15px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            width: 36px;
-            height: 36px;
-            background: rgb(215, 179, 171);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="EstilosHtml/EstiloCssSucursales.css">
 </head>
 <body>
     <!-- Previous content remains the same -->
     <nav>
         <div class="logo">LEONORA</div>
         <div class="nav-links">
-            <a href="#">Productos</a>
-            <a href="#">Cita de valoración</a>
-            <a href="#" class="active">Sucursales</a>
+            <a href="Productos.html">Productos</a>
+            <a href="Reservaciones.html">Citas</a>
+            <a href="sucursales.html" class="active">Sucursales</a>
         </div>        
     </nav>
 
@@ -251,16 +26,16 @@
         <div class="branches">
             <!-- Previous branches content -->
             <div class="branch">
-                <img src="/api/placeholder/400/400" alt="Sucursal Coyoacán" class="branch-image">
+                <img src="imagenes/FotoSucursales1.png" alt="Sucursal Coyoacán" class="branch-image">
                 <div class="branch-info">
                     <h2 class="branch-title">Coyoacán</h2>
                     <div class="info-item">
-                        <span>📍</span>
-                        <a href="#">Xicotencatl 173, Del Carmen Coyoacan, 04100 Ciudad de Mexico, CDMX, México</a>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+                        <a href="https://www.google.com.mx/maps/place/Leonora+Studio/@19.3545339,-99.1555777,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1ffcf43d65539:0x6f0a47f96b4f9b0c!8m2!3d19.3545339!4d-99.1555777!16s%2Fg%2F11f08p40_7?entry=ttu&g_ep=EgoyMDI1MDEyOC4wIKXMDSoASAFQAw%3D%3D">Xicotencatl 173, Del Carmen Coyoacan, 04100 Ciudad de Mexico, CDMX, México</a>
                     </div>
                     <div class="schedule">
                         <div class="info-item">
-                            <span>📅</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z"/></svg></span>
                             <div>
                                 <div>Lunes - Viernes: 10 am a 8 pm</div>
                                 <div>Sábado: 9 am a 8 pm</div>
@@ -269,27 +44,33 @@
                         </div>
                     </div>
                     <div class="info-item">
-                        <span>📞</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99"/></svg></span>
                         <a href="tel:55-7577-8358">55-7577-8358</a>
                     </div>
                     <div class="social-links">
-                        <a href="#">Whatsapp</a>
-                        <a href="#">Instagram</a>
+                        <a href="https://wa.me/5215545079944">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.92 8.92 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a9 9 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.93 8.93 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.45 7.45 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.45 7.45 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.4 7.4 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73s-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393s.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a10 10 0 0 0-.429-.008a.83.83 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321s1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066s.187-.973.131-1.067s-.207-.151-.43-.263" clip-rule="evenodd"/></svg></center>
+                            Whatsapp
+                        </a>
+                        <a href="https://www.instagram.com/leonorastudiomx/">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1000 1000"><path fill="currentColor" d="M749.359 1.095H250.643c-137.4 0-249.186 111.41-249.186 248.348v501.11c0 136.929 111.786 248.351 249.186 248.351h498.716c137.4 0 249.183-111.423 249.183-248.351V249.442c0-136.937-111.783-248.346-249.183-248.346zm156.895 749.456c0 86.214-70.38 156.368-156.894 156.368H250.644c-86.514 0-156.895-70.154-156.895-156.368V426.903h197.146c-14.393 30.443-22.488 64.404-22.488 100.218c0 130.083 106.18 235.897 236.696 235.897c130.513 0 236.695-105.814 236.695-235.897c0-35.814-8.094-69.776-22.49-100.218h186.945v323.648zM406.845 527.123c0-53.99 44.077-97.923 98.259-97.923c54.184 0 98.258 43.934 98.258 97.923c0 54.001-44.074 97.926-98.258 97.926c-54.181-.001-98.259-43.925-98.259-97.926m499.409-192.199H642.08c-38.701-27.468-85.954-43.695-136.976-43.695s-98.281 16.227-136.973 43.695H93.749v-85.481c0-86.223 70.381-156.367 156.895-156.367H749.36c86.514 0 156.894 70.144 156.894 156.367zM806.248 148.861h-85.55c-15.232 0-27.687 12.418-27.687 27.594v85.266c0 15.175 12.454 27.594 27.687 27.594h85.55c15.231 0 27.687-12.419 27.687-27.594v-85.266c0-15.176-12.455-27.594-27.687-27.594"/></svg></center>
+                            Instagram
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="branch">
-                <img src="/api/placeholder/400/400" alt="Sucursal Polanco" class="branch-image">
+                <img src="imagenes/FotoSucursales2.png" alt="Sucursal Polanco" class="branch-image">
                 <div class="branch-info">
                     <h2 class="branch-title">Polanco Horacio</h2>
                     <div class="info-item">
-                        <span>📍</span>
-                        <a href="#">Avenida Horacio 232, Polanco, Polanco V Sección, 11550 Ciudad de México, CDMX, México</a>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+                        <a href="https://www.google.com.mx/maps/place/Leonora+Studio+%7C+Polanco+(Horacio)/@19.4328194,-99.1880402,17z/data=!4m6!3m5!1s0x85d1f9ea58f532dd:0xddb396ee3fd4ae4e!8m2!3d19.4328194!4d-99.1854653!16s%2Fg%2F11t7njrbkl?shorturl=1">Avenida Horacio 232, Polanco, Polanco V Sección, 11550 Ciudad de México, CDMX, México</a>
                     </div>
                     <div class="schedule">
                         <div class="info-item">
-                            <span>📅</span>
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z"/></svg></span>
                             <div>
                                 <div>Lunes - Viernes: 10 am a 8 pm</div>
                                 <div>Sábado: 9 am a 8 pm</div>
@@ -298,39 +79,131 @@
                         </div>
                     </div>
                     <div class="info-item">
-                        <span>📞</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99"/></svg></span>
                         <a href="tel:55-7577-8358">55-7577-8358</a>
                     </div>
                     <div class="social-links">
-                        <a href="#">Whatsapp</a>
-                        <a href="#">Facebook</a>
-                        <a href="#">Instagram</a>
+                        <a href="https://wa.me/5215545079944">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.92 8.92 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a9 9 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.93 8.93 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.45 7.45 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.45 7.45 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.4 7.4 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73s-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393s.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a10 10 0 0 0-.429-.008a.83.83 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321s1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066s.187-.973.131-1.067s-.207-.151-.43-.263" clip-rule="evenodd"/></svg></center>
+                            Whatsapp
+                        </a>
+                        <a href="https://www.facebook.com/leonorastudiomx">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"/></svg></center>                            
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/leonorastudiomx/">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1000 1000"><path fill="currentColor" d="M749.359 1.095H250.643c-137.4 0-249.186 111.41-249.186 248.348v501.11c0 136.929 111.786 248.351 249.186 248.351h498.716c137.4 0 249.183-111.423 249.183-248.351V249.442c0-136.937-111.783-248.346-249.183-248.346zm156.895 749.456c0 86.214-70.38 156.368-156.894 156.368H250.644c-86.514 0-156.895-70.154-156.895-156.368V426.903h197.146c-14.393 30.443-22.488 64.404-22.488 100.218c0 130.083 106.18 235.897 236.696 235.897c130.513 0 236.695-105.814 236.695-235.897c0-35.814-8.094-69.776-22.49-100.218h186.945v323.648zM406.845 527.123c0-53.99 44.077-97.923 98.259-97.923c54.184 0 98.258 43.934 98.258 97.923c0 54.001-44.074 97.926-98.258 97.926c-54.181-.001-98.259-43.925-98.259-97.926m499.409-192.199H642.08c-38.701-27.468-85.954-43.695-136.976-43.695s-98.281 16.227-136.973 43.695H93.749v-85.481c0-86.223 70.381-156.367 156.895-156.367H749.36c86.514 0 156.894 70.144 156.894 156.367zM806.248 148.861h-85.55c-15.232 0-27.687 12.418-27.687 27.594v85.266c0 15.175 12.454 27.594 27.687 27.594h85.55c15.231 0 27.687-12.419 27.687-27.594v-85.266c0-15.176-12.455-27.594-27.687-27.594"/></svg></center>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="branches">
+            <!-- Previous branches content -->
+            <div class="branch">
+                <img src="imagenes/FotoSucursales3.png" alt="Sucursal Coyoacán" class="branch-image">
+                <div class="branch-info">
+                    <h2 class="branch-title">Coapa</h2>
+                    <div class="info-item">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+                        <a href="https://www.google.com.mx/maps/place/Leonora+Studio+%7C+Coapa/@19.294632,-99.128729,18z/data=!3m1!4b1!4m6!3m5!1s0x85ce0103873656f7:0x3ebaeaf74856ee81!8m2!3d19.294632!4d-99.12658!16s%2Fg%2F11s7bv491g?shorturl=1">Calz Acoxpa 610, Coapa, Equipamiento Plaza Coapa, 14390 Tlalpan, CDMX, México</a>
+                    </div>
+                    <div class="schedule">
+                        <div class="info-item">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z"/></svg></span>
+                            <div>
+                                <div>Lunes - Viernes: 10 am a 8 pm</div>
+                                <div>Sábado: 9 am a 8 pm</div>
+                                <div>Domingo: 10 am a 8 pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99"/></svg></span>
+                        <a href="tel:55-7577-8358">55-7577-8358</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/5215545079944">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.92 8.92 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a9 9 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.93 8.93 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.45 7.45 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.45 7.45 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.4 7.4 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73s-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393s.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a10 10 0 0 0-.429-.008a.83.83 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321s1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066s.187-.973.131-1.067s-.207-.151-.43-.263" clip-rule="evenodd"/></svg></center>
+                            Whatsapp
+                        </a>
+                        <a href="https://www.facebook.com/leonorastudiomx">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"/></svg></center>                            
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/leonorastudiomx/">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1000 1000"><path fill="currentColor" d="M749.359 1.095H250.643c-137.4 0-249.186 111.41-249.186 248.348v501.11c0 136.929 111.786 248.351 249.186 248.351h498.716c137.4 0 249.183-111.423 249.183-248.351V249.442c0-136.937-111.783-248.346-249.183-248.346zm156.895 749.456c0 86.214-70.38 156.368-156.894 156.368H250.644c-86.514 0-156.895-70.154-156.895-156.368V426.903h197.146c-14.393 30.443-22.488 64.404-22.488 100.218c0 130.083 106.18 235.897 236.696 235.897c130.513 0 236.695-105.814 236.695-235.897c0-35.814-8.094-69.776-22.49-100.218h186.945v323.648zM406.845 527.123c0-53.99 44.077-97.923 98.259-97.923c54.184 0 98.258 43.934 98.258 97.923c0 54.001-44.074 97.926-98.258 97.926c-54.181-.001-98.259-43.925-98.259-97.926m499.409-192.199H642.08c-38.701-27.468-85.954-43.695-136.976-43.695s-98.281 16.227-136.973 43.695H93.749v-85.481c0-86.223 70.381-156.367 156.895-156.367H749.36c86.514 0 156.894 70.144 156.894 156.367zM806.248 148.861h-85.55c-15.232 0-27.687 12.418-27.687 27.594v85.266c0 15.175 12.454 27.594 27.687 27.594h85.55c15.231 0 27.687-12.419 27.687-27.594v-85.266c0-15.176-12.455-27.594-27.687-27.594"/></svg></center>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branch">
+                <img src="imagenes/FotoSucursales3.png" alt="Sucursal Polanco" class="branch-image">
+                <div class="branch-info">
+                    <h2 class="branch-title">Colonia del Valle</h2>
+                    <div class="info-item">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+                        <a href="https://www.google.com.mx/maps/place/Leonora+Studio+%7C+Col.+del+Valle+(Adolfo+Prieto)/@19.3945187,-99.1696186,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1ff5ef8fcb64f:0xeae7b11b77b521a5!8m2!3d19.3945187!4d-99.1670383!16s%2Fg%2F11fkcynqx3?shorturl=1">Adolfo Prieto 410-local 1, código 2, Col del Valle Centro, Benito Juárez, 03103 Ciudad de México, CDMX</a>
+                    </div>
+                    <div class="schedule">
+                        <div class="info-item">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z"/></svg></span>
+                            <div>
+                                <div>Lunes - Viernes: 10 am a 8 pm</div>
+                                <div>Sábado: 9 am a 8 pm</div>
+                                <div>Domingo: 10 am a 8 pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99"/></svg></span>
+                        <a href="tel:55-7577-8358">55-7577-8358</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/5215545079944">
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M18.403 5.633A8.92 8.92 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977c0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a9 9 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.93 8.93 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.45 7.45 0 0 1-3.798-1.041l-.272-.162l-2.824.741l.753-2.753l-.177-.282a7.45 7.45 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.4 7.4 0 0 1 5.275 2.188a7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73s-.354-.112-.504.112s-.58.729-.711.879s-.262.168-.486.056s-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393s.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666c-.181-.435-.366-.377-.504-.383a10 10 0 0 0-.429-.008a.83.83 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321s1.582 2.415 3.832 3.387c.536.231.954.369 1.279.473c.537.171 1.026.146 1.413.089c.431-.064 1.327-.542 1.514-1.066s.187-.973.131-1.067s-.207-.151-.43-.263" clip-rule="evenodd"/></svg></center>
+                            Whatsapp
+                        </a><br>
+                        <a href="https://www.facebook.com/leonorastudiomx">                           
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"/></svg></center>                            
+                            Facebook
+                        </a><br>
+                        <a href="https://www.instagram.com/leonorastudiomx/">                           
+                            <center><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1000 1000"><path fill="currentColor" d="M749.359 1.095H250.643c-137.4 0-249.186 111.41-249.186 248.348v501.11c0 136.929 111.786 248.351 249.186 248.351h498.716c137.4 0 249.183-111.423 249.183-248.351V249.442c0-136.937-111.783-248.346-249.183-248.346zm156.895 749.456c0 86.214-70.38 156.368-156.894 156.368H250.644c-86.514 0-156.895-70.154-156.895-156.368V426.903h197.146c-14.393 30.443-22.488 64.404-22.488 100.218c0 130.083 106.18 235.897 236.696 235.897c130.513 0 236.695-105.814 236.695-235.897c0-35.814-8.094-69.776-22.49-100.218h186.945v323.648zM406.845 527.123c0-53.99 44.077-97.923 98.259-97.923c54.184 0 98.258 43.934 98.258 97.923c0 54.001-44.074 97.926-98.258 97.926c-54.181-.001-98.259-43.925-98.259-97.926m499.409-192.199H642.08c-38.701-27.468-85.954-43.695-136.976-43.695s-98.281 16.227-136.973 43.695H93.749v-85.481c0-86.223 70.381-156.367 156.895-156.367H749.36c86.514 0 156.894 70.144 156.894 156.367zM806.248 148.861h-85.55c-15.232 0-27.687 12.418-27.687 27.594v85.266c0 15.175 12.454 27.594 27.687 27.594h85.55c15.231 0 27.687-12.419 27.687-27.594v-85.266c0-15.176-12.455-27.594-27.687-27.594"/></svg></center>
+                            Instagram
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- ------------------------------------------------------------  -->
+    
     <!-- New Services Section -->
     <section class="services-section">
         <div class="services-container">
             <div class="service-item">
-                <img src="/api/placeholder/40/40" alt="Envíos">
+                <span class="ep--van"></span><br>
                 <h3>ENVÍOS</h3>
                 <p>Envío gratis a partir de $900</p>
             </div>
             <div class="service-item">
-                <img src="/api/placeholder/40/40" alt="Agendar en línea">
+                <span class="ep--service"></span><br>
                 <h3>AGENDAR EN LÍNEA</h3>
                 <p>Agenda en línea tu servicio</p>
             </div>
             <div class="service-item">
-                <img src="/api/placeholder/40/40" alt="Agendar por Whatsapp">
-                <h3>AGENDAR POR WHATSAPP</h3>
+                <span class="ep--chat-dot-round"></span><br>
+                <h3>AGENDAR POR MENSAJE</h3>
                 <p>Escríbenos por Whatsapp para agendar</p>
             </div>
             <div class="service-item">
-                <img src="/api/placeholder/40/40" alt="Agendar por teléfono">
+                <span class="ep--phone"></span><br>
                 <h3>AGENDAR POR TELÉFONO</h3>
                 <p>Llámanos para agendar tu cita</p>
             </div>
@@ -374,16 +247,19 @@
                     <input type="email" placeholder="Correo electrónico">
                     <button>→</button>
                 </div>
-                <div class="social-icons">
-                    <a href="#">f</a>
-                    <a href="#">i</a>
-                    <a href="#">t</a>
-                    <a href="#">y</a>
-                    <a href="#">m</a>
-                    <a href="#">p</a>
+                <div class="social-icons">                    
+                    <a href="https://www.facebook.com/leonorastudiomx"><span class="bxl--facebook"></span></a>
+                    <a href="https://www.instagram.com/leonorastudiomx/"><span class="bxl--instagram"></span></a>
+                    <a href="https://www.tiktok.com/@leonorastudiomx"><span class="bxl--tiktok"></span></a>
+                    <a href="https://www.youtube.com/channel/UCU0E106LOkNgEnTcAcXOd3Q"><span class="bxl--youtube"></span></a>
+                    <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F1535652286496294%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0"><span class="bxl--messenger"></span></a>
+                    <a href="https://uk.pinterest.com/leonorastudiomx/"><span class="bxl--pinterest-alt"></span></a>                    
                 </div>
             </div>
         </div>
+        <br><br><br>
     </footer>
+
+
 </body>
 </html>

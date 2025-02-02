@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-structure Shampoo - Leonora</title>
+    <link rel="stylesheet" href="EstilosHtml/EstiloCssProducto1.css">
+    <script>
+        function mostrarPago(precio) {
+            document.getElementById('formularioPago').style.display = 'block';
+        }    
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">LEONORA</div>
+        <div class="nav-links">
+            <a href="Productos.html">Productos</a>
+            <a href="Reservaciones.html">Citas</a>
+            <a href="sucursales.html" class="active">Sucursales</a>
+        </div>     
+    </nav>
+
+    <div class="product-container">
+        <div class="product-gallery">
+            <img src="imagenes/Producto5.png" alt="Re-structure Shampoo" class="main-image" />           
+        </div>
+
+        <div class="product-info">
+            <h1>Repair Conditioner</h1>
+            <p class="brand">Framesi</p>
+            <p class="price">$550.00</p>
+
+            <div class="quantity-selector">
+                <button class="quantity-btn" id="decrease">-</button>
+                <input type="number" value="0" id="quantity" class="quantity-input" readonly />
+                <button class="quantity-btn" id="increase">+</button>
+            </div>
+
+            <button class="add-to-cart" onclick="mostrarPago(550)">Agregar a mi carrito</button>
+
+            <div class="payment-methods">
+                <h3>Métodos de pago:</h3>
+                <div class="payment-icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 2304 1536"><path fill="currentColor" d="M745 778q0 37-25.5 61.5T657 864q-29 0-46.5-16T593 804q0-37 25-62.5t62-25.5q28 0 46.5 16.5T745 778m785-149q0 42-22 57t-66 15l-32 1l17-107q2-11 13-11h18q22 0 35 2t25 12.5t12 30.5m351 149q0 36-25.5 61t-61.5 25q-29 0-47-16t-18-44q0-37 25-62.5t62-25.5q28 0 46.5 16.5T1881 778M513 607q0-59-38.5-85.5T374 495H214q-19 0-21 19l-65 408q-1 6 3 11t10 5h76q20 0 22-19l18-110q1-8 7-13t15-6.5t17-1.5t19 1t14 1q86 0 135-48.5T513 607m309 312l41-261q1-6-3-11t-10-5h-76q-14 0-17 33q-27-40-95-40q-72 0-122.5 54T489 816q0 59 34.5 94t92.5 35q28 0 58-12t48-32q-4 12-4 21q0 16 13 16h69q19 0 22-19m447-263q0-5-4-9.5t-9-4.5h-77q-11 0-18 10l-106 156l-44-150q-5-16-22-16h-75q-5 0-9 4.5t-4 9.5q0 2 19.5 59t42 123t23.5 70q-82 112-82 120q0 13 13 13h77q11 0 18-10l255-368q2-2 2-7m380-49q0-59-38.5-85.5T1510 495h-159q-20 0-22 19l-65 408q-1 6 3 11t10 5h82q12 0 16-13l18-116q1-8 7-13t15-6.5t17-1.5t19 1t14 1q86 0 135-48.5t49-134.5m309 312l41-261q1-6-3-11t-10-5h-76q-14 0-17 33q-26-40-95-40q-72 0-122.5 54T1625 816q0 59 34.5 94t92.5 35q29 0 59-12t47-32q0 1-2 9t-2 12q0 16 13 16h69q19 0 22-19m218-409v-1q0-14-13-14h-74q-11 0-13 11l-65 416l-1 2q0 5 4 9.5t10 4.5h66q19 0 21-19zM392 644q-5 35-26 46t-60 11l-33 1l17-107q2-11 13-11h19q40 0 58 11.5t12 48.5m1912-516v1280q0 52-38 90t-90 38H128q-52 0-90-38t-38-90V128q0-52 38-90t90-38h2048q52 0 90 38t38 90"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24"><path fill="currentColor" d="M16.539 9.186a4.2 4.2 0 0 0-1.451-.251c-1.6 0-2.73.806-2.738 1.963c-.01.85.803 1.329 1.418 1.613c.631.292.842.476.84.737c-.004.397-.504.577-.969.577c-.639 0-.988-.089-1.525-.312l-.199-.093l-.227 1.332c.389.162 1.09.301 1.814.313c1.701 0 2.813-.801 2.826-2.032c.014-.679-.426-1.192-1.352-1.616c-.563-.275-.912-.459-.912-.738c0-.247.299-.511.924-.511a2.95 2.95 0 0 1 1.213.229l.15.067l.227-1.287zm4.152-.143h-1.25c-.389 0-.682.107-.852.493l-2.404 5.446h1.701l.34-.893l2.076.002c.049.209.199.891.199.891h1.5zm-10.642-.05h1.621l-1.014 5.942H9.037l1.012-5.944zm-4.115 3.275l.168.825l1.584-4.05h1.717l-2.551 5.931H5.139l-1.4-5.022a.34.34 0 0 0-.149-.199a7 7 0 0 0-1.592-.589l.022-.125h2.609c.354.014.639.125.734.503l.57 2.729v-.003zm12.757.606l.646-1.662c-.008.018.133-.343.215-.566l.111.513l.375 1.714H18.69z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 1000 1000"><path fill="currentColor" d="M46.531 186C20.841 186 0 206.814 0 232.5v535C0 793.189 20.844 814 46.531 814H953.47c25.69 0 46.531-20.814 46.531-46.5v-535c0-25.689-20.844-46.5-46.531-46.5H46.53zM37.22 317.938h72.875l9.406 19.312v-19.313h85.438l18.687 42.25l18.219-42.25h271.312c12.332 0 23.424 2.282 31.563 9.532v-9.531h74.25v9.53c12.79-7.033 28.611-9.53 46.625-9.53H773.22l9.968 19.312v-19.313h79.688l10.875 19.313v-19.313h77.625v163.688h-78.438l-14.843-24.781v24.781H760.22l-10.657-26.094H725.47l-10.875 26.094H663.78c-19.935 0-35.072-4.73-44.812-9.969v9.969h-120.75v-37.156c0-5.243-.93-5.547-4.094-5.656h-4.531l.125 42.812h-233.5v-20.25l-8.375 20.313h-48.781l-8.375-20v19.937H96.75L86 455.531H61.906l-10.781 26.094H3.375V395.75zM3.375 459.03h30.344l10.843-26.25h58.126l10.718 26.25h56.813v-92.187l40.594 92.187h24.53l40.47-92.094l.125 92.094h28.625V341.437h-46.5L224.5 421.22l-36.563-79.781h-45.562V452.75l-47.5-111.313h-41.5l-50 117.594zm322.156-117.594V459.03h93.125v-24.344h-65.25V411.22h63.688v-24.094h-63.688v-21.188h65.25v-24.5h-93.125zm113.25 0V459.03h28v-42.78h30.031c10.076 0 16.317.896 20.407 5.031c5.092 5.657 4.406 15.831 4.406 22.906l.125 14.844h28.219v-23.125c0-10.5-.674-15.714-4.625-21.562c-2.49-3.426-7.72-7.566-13.844-9.906c7.26-2.909 19.719-12.597 19.719-31.344c0-13.115-5.334-20.78-14.188-26.031c-9.047-5.253-19.572-5.625-33.875-5.625h-64.375zm128.375 0V459.03h28.5V341.437h-28.5zm99.438 0c-19.258 0-33.403 4.335-42.438 13.72c-12.01 12.596-15.062 28.53-15.062 45.968c0 21.382 5.116 34.892 14.937 44.875c9.74 9.983 26.916 13.031 40.5 13.031h32.719l10.563-26.25h58.03l10.876 26.25h56.906v-88.25l52.969 88.25h39.625V341.437h-28.625v81.907l-49.125-81.906h-42.563v111.218l-47.312-111.219h-41.875l-39.375 92.47H664.78c-7.356 0-15.166-1.41-19.468-6.063c-5.195-5.934-7.688-15.028-7.688-27.625c0-12.324 3.267-21.674 8.031-26.625c5.547-5.44 11.302-6.969 21.5-6.969h26.5v-25.188h-27.062zM73.375 360.75l18.938 47.031h-37.75zm664.031 0l19.344 47.031h-38.594zm-270.937 5.031H501c4.885 0 9.97.23 13.281 2.125c3.636 1.708 5.875 5.355 5.875 10.375c0 5.123-2.145 9.227-5.781 11.125c-3.852 2.337-8.386 2.438-13.844 2.438H466.47V365.78zM200.53 519.5h150.563l21.594 25.031L395.78 519.5h100.781c11.653 0 30.779 1.207 39.375 9.563V519.5H626c8.463 0 26.79 1.695 37.656 9.563V519.5h136.532v9.563c6.788-6.538 21.147-9.563 33.375-9.563h76.468v9.563c8.026-5.83 19.337-9.563 34.938-9.563h51.718v23.344h-55.656c-29.311 0-40.062 17.89-40.062 34.906c0 37.124 32.71 35.417 58.937 36.313c4.864 0 7.817.803 9.844 2.593c2.055 1.628 3.406 4.364 3.406 7.782c0 3.201-1.335 5.841-3.281 7.656c-2.245 2.2-5.983 2.906-11.313 2.906h-53.718v25.156h53.937c17.899 0 31.121-5.073 37.907-15.031v30.5c-11.191 5.427-25.908 7.563-40.97 7.563h-72.374v-10.5c-8.386 6.753-23.514 10.5-38 10.5H617.156v-37.844c0-4.638-.47-4.844-5.093-4.844h-3.594v42.688h-75.125V639c-12.573 5.455-26.824 5.937-38.907 5.75h-8.968v38.5l-91.063-.063l-22.375-25.468l-23.781 25.468H200.531V519.5zm25.156 23.5v117.594h110.72l35.78-38.938l34.407 38.938h54.344v-39.438h34.875c24.433 0 48.687-6.744 48.687-39.406c0-32.563-24.942-38.75-47.125-38.75h-89.313L372.5 581.563L338.125 543H225.687zm331.407 0v117.594h28.031v-42.938h29.844c10.186 0 16.42 1.007 20.5 5.219c5.19 5.467 4.5 15.926 4.5 23v14.719H668V637.28c-.113-10.364-.682-15.728-4.625-21.468c-2.382-3.426-7.44-7.567-13.656-9.875c7.35-2.936 19.777-12.515 19.781-31.282c0-13.413-5.531-20.736-14.344-26.093c-9.164-4.922-19.488-5.563-33.625-5.563zm128.343 0v117.594h93.125v-24.407l-65.343-.093v-23.407h63.75v-24h-63.75v-21.375h65.343V543zm146.438 0c-29.264 0-39.906 17.945-39.906 35c0 37.21 32.708 35.51 58.812 36.406c4.861 0 7.803.831 9.938 2.625c1.916 1.631 3.406 4.325 3.406 7.75c0 3.21-1.393 5.869-3.313 7.688c-2.352 2.205-6.08 2.906-11.375 2.906H795.28v25.219h54.375c28.151 0 43.844-11.83 43.844-37.125c0-12.102-2.909-19.244-8.344-24.907c-6.322-6.446-16.721-9.065-31.875-9.437l-15.031-.406c-4.755 0-7.93-.312-10.875-1.344c-3.512-1.305-6.094-4.314-6.094-8.75c0-3.73 1.13-6.565 4.188-8.469c2.807-1.932 6.112-2.125 11.187-2.125h51.188V543zm-398.969 12.594v94.062l-42.781-47.781zm-179.531 11.781h70.094l30.594 34.313l-31.938 34.53h-68.75v-23.405h61.375V588.78h-61.375zm207.219 0h36.562c10.12 0 17.125 4.149 17.125 14.531c0 10.268-6.698 15.688-17.468 15.688h-36.22v-30.219zm125 0h34.531c4.99 0 9.983.105 13.375 2.094c3.632 1.877 5.781 5.446 5.781 10.406s-2.149 8.954-5.781 11.125c-3.749 2.199-8.39 2.406-13.844 2.406h-34.062zm360.187.813h50.907v33.593c-.78-1.01-1.463-2.005-2.594-2.906c-6.216-6.469-16.416-9.12-31.688-9.5l-15.125-.406c-4.651 0-7.835-.308-10.781-1.344c-3.619-1.31-6.094-4.327-6.094-8.781c0-3.746 1.148-6.588 4.094-8.5c2.844-1.94 6.2-2.157 11.281-2.157z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 1000 1000"><path fill="currentColor" d="M46.531 195C20.841 195 0 215.83 0 241.531V776.47C0 802.166 20.844 823 46.531 823H953.47c25.69 0 46.531-20.83 46.531-46.531V241.53c0-25.697-20.844-46.531-46.531-46.531H46.53zm281.375 75.594c57.081 0 109.505 19.859 150.656 53.031c-34.622 30.979-60.446 71.68-73.187 117.813h19.969c11.76-38.058 33.123-71.942 61.281-98.813c28.158 26.871 49.52 60.755 61.281 98.813h20.282c-12.918-45.89-38.778-86.348-73.375-117.125c41.23-33.593 93.86-53.72 151.187-53.72c132.291 0 239.531 107.252 239.531 239.563S778.291 749.719 646 749.719c-58.28 0-111.72-20.802-153.25-55.407c37.15-32.32 64.538-75.647 77.063-124.937H550.28c-11.121 41.37-33.505 78.165-63.656 106.938c-30.15-28.773-52.503-65.568-63.625-106.938h-18.594c12.598 48.576 39.628 91.297 76.219 123.313c-41.454 34.176-94.684 54.718-152.719 54.718c-132.29 0-239.53-106.736-239.53-238.406s107.24-238.406 239.531-238.406M628.031 439c-28.781 0-56.781 25.162-56.781 72.406c0 31.328 15.124 52 44.875 52c8.412.003 21.813-3.437 21.813-3.437l4.437-27.375s-12.23 6.187-20.625 6.187c-17.685 0-24.781-13.601-24.781-28.218c0-29.653 15.216-45.97 32.156-45.97c12.703 0 22.906 7.188 22.906 7.188l4.063-26.625S640.99 439 628.03 439zM870 441.313l-25.031.062l-5.375 32.938s-9.41-12.782-24.125-12.782c-22.88 0-41.938 27.18-41.938 58.438c0 20.177 10.143 39.968 30.938 39.968c14.958 0 23.25-10.28 23.25-10.28l-1.094 8.78h24.313zm-716.938.343l-19.937 117.406h24.031l15.188-88.53l2.25 88.53h17.187l32.063-88.53l-14.219 88.53h25.531l19.688-117.406h-39.5l-24.594 72.031l-1.281-72.03h-36.406zm251.063 7.625c-.543.545-14.531 81.207-14.531 91.031c0 14.546 8.153 21.043 19.625 20.938c8.22-.07 14.586-2.135 17.531-3c.308-.083.906-.25.906-.25l3.094-21c-1.682 0-4.16.719-6.344.719c-8.565 0-9.514-4.557-8.969-7.938l6.907-42.843h13.031l3.156-23.22H426.25l2.5-14.437zm290.469 11.813c-16.773 0-29.625 5.531-29.625 5.531l-3.563 21.563s10.615-4.407 26.657-4.407c9.108 0 15.78 1.042 15.78 8.625c0 4.606-.812 6.313-.812 6.313s-7.202-.625-10.531-.625c-21.152 0-43.375 9.27-43.375 37.156c0 21.972 14.589 27 23.625 27c17.258 0 24.7-11.465 25.094-11.5l-.813 9.563h21.532l9.625-69c.003-29.278-24.934-30.22-33.594-30.22zm-403.907.125c-16.834 0-29.75 5.531-29.75 5.531l-3.562 21.563s10.65-4.407 26.75-4.407c9.142 0 15.844 1.046 15.844 8.625c0 4.604-.813 6.313-.813 6.313s-7.223-.625-10.562-.625c-21.233 0-43.531 9.255-43.531 37.125c0 21.96 14.618 27 23.687 27c17.321 0 24.79-11.466 25.188-11.5l-.813 9.562h21.625l9.656-68.968c0-29.261-25.027-30.22-33.719-30.22zm76.375 0c-18.077 0-36.437 7.297-36.437 32.219c0 28.238 30.594 25.385 30.594 37.28c0 7.94-8.538 8.595-15.125 8.595c-11.4 0-21.651-3.939-21.688-3.75l-3.281 21.562c.59.183 6.938 3.031 27.438 3.031c5.504 0 36.968 1.398 36.968-31.375c0-30.639-29.125-24.566-29.125-36.875c0-6.128 4.729-8.062 13.406-8.062c3.446 0 16.72 1.094 16.72 1.094l3.062-21.782c0 .003-8.565-1.937-22.531-1.937zm113 0c-25.12.005-43.718 27.017-43.718 57.531c0 35.219 23.302 43.594 43.156 43.594c18.326 0 26.406-4.094 26.406-4.094l4.375-24.031s-13.941 6.125-26.531 6.125c-26.826 0-22.125-19.969-22.125-19.969h50.781s3.282-16.138 3.282-22.719c0-16.42-8.195-36.437-35.625-36.437zm90.97 1.031c-11.317 0-19.72 15.219-19.72 15.219l2.25-13.969h-23.5l-15.78 96.438h25.968c7.355-41.182 8.698-74.621 26.25-68.5c3.072-15.94 6.053-22.098 9.406-28.844c0 0-1.575-.344-4.875-.344zm210.405 0c-11.316 0-19.718 15.219-19.718 15.219l2.25-13.969h-23.5l-15.782 96.438h25.938c7.358-41.182 8.735-74.621 26.281-68.5c3.078-15.94 6.056-22.098 9.407-28.844c0 0-1.576-.344-4.875-.344zm-301.5 20.719c14.267 0 11.657 16.104 11.657 17.406H463.5c0-1.662 2.658-17.406 16.438-17.406zm339.47 1.875c9.08-.003 13.75 6.131 13.75 20.562c0 13.094-6.604 30.594-20.282 30.594c-9.078 0-13.344-7.497-13.344-19.25c0-19.218 8.792-31.906 19.875-31.906zm-124.782 32.812c3.704.005 4.47.365 5.094.532c-.09-.015-.107.002.25.062c.469 4.295-2.595 24.438-17.407 24.438c-7.637 0-9.593-6.073-9.593-9.657c0-6.988 3.638-15.375 21.656-15.375m-403.906.094c4.207.005 4.666.475 5.375.594c.47 4.293-2.606 24.406-17.469 24.406c-7.667 0-9.656-6.044-9.656-9.625c0-6.984 3.66-15.375 21.75-15.375"/></svg>                    
+                </div>
+            </div>
+
+
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const quantityInput = document.getElementById("quantity");
+                    const increaseBtn = document.getElementById("increase");
+                    const decreaseBtn = document.getElementById("decrease");
+        
+                    increaseBtn.addEventListener("click", function () {
+                        quantityInput.value = parseInt(quantityInput.value);
+                    });
+        
+                    decreaseBtn.addEventListener("click", function () {
+                        if (parseInt(quantityInput.value) > 0) {
+                            quantityInput.value = parseInt(quantityInput.value);
+                        }
+                    });
+                });
+            </script>
+
+
+
+            <!-- Sección Descripción -->
+            <div class="toggle-section">
+                <h3 class="section-title">
+                    Descripción
+                    <span class="toggle-icon">+</span>
+                </h3>
+                <div class="section-content">
+                    <p>
+                        Re-Structure shampoo limpieza capilar profunda, para un cabello más radiante e hidratado.
+                    </p>                   
+                </div>
+            </div>
+
+            <div class="toggle-section">
+                <h3 class="section-title">
+                    Tiempos y costos de envío
+                    <span class="toggle-icon">+</span>
+                </h3>
+                <div class="section-content">
+                    <p>
+                        Nuestro servicio de entrega tiene un costo que va desde los $69.00* mxn en CDMX o área metropolitana. El costo puede cambiar de acuerdo a la zona de entrega y el tamaño del paquete. Los envíos son Gratis en compras mayores a $900. El tiempo de entrega es de 24 horas si tu compra la realizas en día hábil. Si tu compra la realizas en fin de semana tomará un máximo de 3 días. Si tienes problemas para recibir tu pedido escribe a hola@leonora-studio.mx y te contactaremos.
+                    </p>                   
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script>
+        // Funcionalidad para cambiar la imagen principal al hacer clic en una miniatura
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.querySelector('.main-image img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+            });
+        });
+
+        // Funcionalidad para desplegar y contraer secciones
+        const toggleSections = document.querySelectorAll('.toggle-section');
+
+        toggleSections.forEach(section => {
+            const title = section.querySelector('.section-title');
+            const content = section.querySelector('.section-content');
+            const icon = section.querySelector('.toggle-icon');
+
+            title.addEventListener('click', () => {
+                content.classList.toggle('show');
+                icon.textContent = content.classList.contains('show') ? '−' : '+';
+            });
+        });        
+    </script>
+
+
+<div id="formularioPago" style="display: none;">        
+    <form>            
+        <div id="step-1" class="form-step">
+            <center><h3>Formulario de Pago</h3></center><br><br>
+            <label>Pais/Region</label>
+            <select id="servicio">
+                <option>México</option>                    
+            </select><br><br> 
+            <label>Nombre:</label>
+            <input type="text" id="nombre" required><br><br>
+            <label>Apellido:</label>
+            <input type="text" id="Apellido" required><br><br>
+            <label>Dirección completa:</label>
+            <input type="text" id="Direccion" required><br><br>
+            <label>Colonia:</label>
+            <input type="text" id="Colonia" required><br><br>
+            <label>Codigo postal:</label>
+            <input type="text" id="CP" required><br><br>
+            <label>Cuidad:</label>
+            <input type="text" id="cuidad" required><br><br>
+            <label>Estado:</label>
+            <input type="text" id="estado" required><br><br>
+            <label>Numero telefonico:</label>
+            <input type="tel" id="telefono" required><br><br>
+            <button onclick="nextStep(1)">Siguiente</button><br><br>
+        </div>
+
+        <div id="step-2" class="form-step" style="display: none;">
+            <center><h3>Datos del Pago</h3></center><br><br>                                         
+            <label>Numero de tarjeta:</label>
+            <input type="text" id="tarjeta" required><br><br>
+            <label>Fecha de vencimiento:</label>
+            <input type="text" id="f_vencimiento" required><br><br>
+            <label>Código de seguridad:</label>
+            <input type="text" id="CSeguridad" required><br><br>
+            <label>Total a pagar:</label>
+            <input type="text" id="TPagar" required><br><br>
+            <button onclick="prevStep(1)">Anterior</button>
+            <button id="finalizar" onclick="validarFormulario()">Finalizar</button><br><br>
+        </div>                        
+        
+        <div id="confirmacion" class="form-step" style="display: none;">
+            <h3>Pago realizado</h3>
+            <p>Revisa tu correo :) </p>
+        </div>
+    </form>
+</div>
+
+<script>
+    let precioUnitario = 550.00;
+
+    function mostrarPago(precio) {
+        precioUnitario = precio;
+        document.getElementById('formularioPago').style.display = 'block';
+        calcularTotal(); // Llamar a la función al mostrar el formulario
+    }
+
+    function calcularTotal() {
+        // Obtener el valor de la cantidad del input con id "quantity"
+        let cantidad = document.getElementById('quantity').value;
+        
+        // Asegurarse de que la cantidad sea un número entero y calcular el total
+        let total = cantidad * precioUnitario;
+        
+        // Mostrar el total en el campo correspondiente
+        document.getElementById('TPagar').value = `$${total.toFixed(2)}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const quantityInput = document.getElementById("quantity");
+        const increaseBtn = document.getElementById("increase");
+        const decreaseBtn = document.getElementById("decrease");
+
+        increaseBtn.addEventListener("click", function () {
+            let currentQuantity = parseInt(quantityInput.value) || 0;  // Convertir a número, si no es un número válido se asigna 0
+            currentQuantity++;  // Incrementar en 1
+            quantityInput.value = currentQuantity;  // Asignar el nuevo valor
+            calcularTotal(); // Llamar a calcularTotal al cambiar la cantidad
+        });
+
+
+        // Evento para disminuir la cantidad
+        decreaseBtn.addEventListener("click", function () {
+            if (parseInt(quantityInput.value) > 0) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+                calcularTotal(); // Llamar a calcularTotal al cambiar la cantidad
+            }
+        });
+    });
+</script>
+
+<script>
+    // Lista de precios por servicio
+    const preciosServicios = {
+        "Corte de cabello": 50.00,
+        "Aplicación de tinte": 85.00,
+        "Manicure": 40.00,
+        "Pedicure": 45.00
+    };
+
+    document.getElementById("servicio").addEventListener("change", function() {
+        let servicioSeleccionado = this.value;
+        let precioCampo = document.getElementById("precio");
+        let totalCampo = document.getElementById("total");
+
+        // Asignar el precio correspondiente
+        if (servicioSeleccionado in preciosServicios) {
+            let precio = preciosServicios[servicioSeleccionado].toFixed(2);
+            precioCampo.value = `$${precio}`;
+            totalCampo.value = `$${precio}`;
+        } else {
+            precioCampo.value = "";
+            totalCampo.value = "";
+        }
+    });
+
+    // Función para validar que todos los campos estén llenos
+    function validarFormulario() {
+        let nombre = document.getElementById("nombre").value.trim();
+        let apellido = document.getElementById("Apellido").value.trim();
+        let direccion = document.getElementById("Direccion").value.trim();
+        let colonia = document.getElementById("Colonia").value.trim();
+        let cp = document.getElementById("CP").value.trim();
+        let ciudad = document.getElementById("cuidad").value.trim();
+        let estado = document.getElementById("estado").value.trim();
+        let telefono = document.getElementById("telefono").value.trim();
+        let tarjeta = document.getElementById("tarjeta").value.trim();
+        let f_vencimiento = document.getElementById("f_vencimiento").value.trim();
+        let cSeguridad = document.getElementById("CSeguridad").value.trim();
+        let tPagar = document.getElementById("TPagar").value.trim();
+        let servicio = document.getElementById("servicio").value;
+
+        if (
+            nombre === "" || apellido === "" || direccion === "" || colonia === "" || 
+            cp === "" || ciudad === "" || estado === "" || telefono === "" || 
+            tarjeta === "" || f_vencimiento === "" || cSeguridad === "" || 
+            tPagar === "" || servicio === ""
+        ) {
+            alert("Por favor, completa todos los campos antes de finalizar.");
+            return false;
+        }
+
+        // Crear el objeto con los datos del formulario
+    const datosFormulario = {
+        nombre: nombre,
+        apellido: apellido,
+        direccion: direccion,
+        colonia: colonia,
+        codigoPostal: cp,
+        ciudad: ciudad,
+        estado: estado,
+        telefono: telefono,
+        tarjeta: tarjeta,
+        fechaVencimiento: f_vencimiento,
+        codigoSeguridad: cSeguridad,
+        totalPagar: parseFloat(tPagar.replace('$', '').trim()), // Remover el signo de dólar y convertir a número
+        servicio: servicio
+    };
+
+    // Enviar los datos al endpoint
+    fetch('http://localhost:3000/api/payment', {
+        method: 'POST', // El método HTTP a usar
+        headers: {
+            'Content-Type': 'application/json' // Asegurarse de que los datos se envíen como JSON
+        },
+        body: JSON.stringify(datosFormulario) // Convertir los datos a formato JSON
+    })
+    .then(response => response.json()) // Procesar la respuesta del servidor
+    .then(data => {
+        // Aquí puedes manejar la respuesta del servidor
+        alert("¡Pago Realizado, Revisa tu correo!");
+        location.reload();
+    })
+    .catch(error => {
+        // Manejo de errores si la solicitud falla
+        console.error('Error al realizar el pago:', error);
+        alert("Hubo un error al realizar el pago. Intenta nuevamente.");
+    });
+
+        return true;
+    }
+
+    // Asignar la función al botón de finalizar
+    document.getElementById("finalizar").addEventListener("click", function(event) {
+        event.preventDefault(); // Evita que la página se recargue
+        validarFormulario();
+    });
+</script>
+
+<script>
+    function nextStep(step) {
+        // Ocultar el paso actual
+        document.querySelector('.form-step:not([style*="display: none"])').style.display = 'none';
+        
+        // Mostrar el siguiente paso
+        document.getElementById(`step-${step + 1}`).style.display = 'block';
+    }
+
+    function prevStep(step) {
+        // Ocultar el paso actual
+        document.querySelector('.form-step:not([style*="display: none"])').style.display = 'none';
+        
+        // Mostrar el paso anterior
+        document.getElementById(`step-${step}`).style.display = 'block';
+    }
+</script>
+
+    <!-- New Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="service-item">
+                <span class="ep--van"></span><br>
+                <h3>ENVÍOS</h3>
+                <p>Envío gratis a partir de $900</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--service"></span><br>
+                <h3>AGENDAR EN LÍNEA</h3>
+                <p>Agenda en línea tu servicio</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--chat-dot-round"></span><br>
+                <h3>AGENDAR POR MENSAJE</h3>
+                <p>Escríbenos por Whatsapp para agendar</p>
+            </div>
+            <div class="service-item">
+                <span class="ep--phone"></span><br>
+                <h3>AGENDAR POR TELÉFONO</h3>
+                <p>Llámanos para agendar tu cita</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LEONORA STUDIO</h4>
+                <ul>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Franquicias</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ATENCIÓN A CLIENTE</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Información de envíos</a></li>
+                    <li><a href="#">Política de devoluciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACTO</h4>
+                <ul>
+                    <li><a href="#">Nuestras Sucursales</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li>WP. 55 4507 9944</li>
+                    <li>T. +52 55 7577 8358</li>
+                    <li>D. 1ª Cerrada Xola #30, Col. del Valle, CDMX.</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>NEWSLETTER</h4>
+                <p>Suscríbete a nuestro Newsletter y obtén el 10% de descuento en tu primera compra.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Correo electrónico">
+                    <button>→</button>
+                </div>
+                <div class="social-icons">                    
+                    <a href="https://www.facebook.com/leonorastudiomx"><span class="bxl--facebook"></span></a>
+                    <a href="https://www.instagram.com/leonorastudiomx/"><span class="bxl--instagram"></span></a>
+                    <a href="https://www.tiktok.com/@leonorastudiomx"><span class="bxl--tiktok"></span></a>
+                    <a href="https://www.youtube.com/channel/UCU0E106LOkNgEnTcAcXOd3Q"><span class="bxl--youtube"></span></a>
+                    <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F1535652286496294%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0"><span class="bxl--messenger"></span></a>
+                    <a href="https://uk.pinterest.com/leonorastudiomx/"><span class="bxl--pinterest-alt"></span></a>                    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

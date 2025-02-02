@@ -10,9 +10,9 @@
     <nav>
         <div class="logo">LEONORA</div>
         <div class="nav-links">
-            <a href="#">Productos</a>
-            <a href="#" class="active">Cita de valoración</a>
-            <a href="#">Sucursales</a>
+            <a href="Productos.html">Productos</a>
+            <a href="Reservaciones.html" class="active">Citas</a>
+            <a href="sucursales.html">Sucursales</a>
         </div>      
     </nav>
 
@@ -223,34 +223,77 @@
         });
 
         // Función para validar que todos los campos estén llenos
-        function validarFormulario() {
-            let nombre = document.getElementById("nombre").value.trim();
-            let telefono = document.getElementById("telefono").value.trim();
-            let fecha = document.getElementById("fecha").value.trim();
-            let servicio = document.getElementById("servicio").value;
-            let precio = document.getElementById("precio").value.trim();
-            let total = document.getElementById("total").value.trim();
+       // Función para validar y enviar el formulario de citas
+function validarFormulario() {
+    let nombre_cliente = document.getElementById("nombre").value.trim();
+    let telefono_cliente = document.getElementById("telefono").value.trim();
+    let correo_cliente = document.getElementById("correo").value.trim();
+    let servicio = document.getElementById("servicio").value;
+    let lugar = document.getElementById("lugar").value.trim();
+    let precio = document.getElementById("precio").value.trim();
+    let fecha = document.getElementById("fecha").value.trim();
+    let horario = document.getElementById("horario").value.trim();
+    let tarjeta_credito = document.getElementById("tarjeta").value.trim();
+    let fecha_reserva = document.getElementById("fecha").value.trim();
 
-            if (nombre === "" || telefono === "" || fecha === "" || servicio === "" || precio === "" || total === "") {
-                alert("Por favor, completa todos los campos antes de finalizar.");
-                return false;
-            }
+    // Mostrar los valores en la consola (opcional para depuración)
+    console.log({
+        nombre_cliente, telefono_cliente, correo_cliente, servicio, lugar, precio, fecha, horario, tarjeta_credito, fecha_reserva
+    });
 
-            alert("¡Cita agendada con éxito!");
-            location.reload();
-            return true;
-        }
+    // Validar si todos los campos están llenos
+    if (
+        nombre_cliente === "" || telefono_cliente === "" || correo_cliente === "" || servicio === "" || 
+        lugar === "" || precio === "" || fecha === "" || horario === "" || tarjeta_credito === ""
+    ) {
+        alert("Por favor, completa todos los campos antes de finalizar.");
+        return false;
+    }
 
-        // Asignar la función al botón de finalizar
-        document.getElementById("finalizar").addEventListener("click", function(event) {
-            event.preventDefault(); // Evita que la página se recargue
-            validarFormulario();
-        });
+    // Crear el objeto con los datos del formulario
+    const datosFormulario = {
+        nombre_cliente: nombre_cliente,
+        telefono_cliente: telefono_cliente,
+        correo_cliente: correo_cliente,
+        servicio: servicio,
+        lugar: lugar,
+        precio: parseFloat(precio.replace('$', '').trim()), // Remover el signo de dólar y convertir a número
+        fecha: fecha,
+        horario: horario,
+        tarjeta_credito: tarjeta_credito,
+        fecha_reserva: fecha_reserva || new Date().toISOString() // Si no se recibe, usar la fecha actual
+    };
+
+    // Enviar los datos al endpoint de Cita
+    fetch('http://localhost:3000/api/cita', {
+        method: 'POST', // El método HTTP a usar
+        headers: {
+            'Content-Type': 'application/json' // Asegurarse de que los datos se envíen como JSON
+        },
+        body: JSON.stringify(datosFormulario) // Convertir los datos a formato JSON
+    })
+    .then(response => response.json()) // Procesar la respuesta del servidor
+    .then(data => {
+        // Aquí puedes manejar la respuesta del servidor
+        alert("¡Cita agendada con éxito!");
+        location.reload(); // Recargar la página para limpiar el formulario
+    })
+    .catch(error => {
+        // Manejo de errores si la solicitud falla
+        console.error('Error al guardar la cita:', error);
+        alert("Hubo un error al guardar la cita. Intenta nuevamente.");
+    });
+
+    return true;
+}
+
+// Asignar la función al botón de finalizar
+document.getElementById("finalizar").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita que la página se recargue
+    validarFormulario();
+});
+
     </script>
-
-
-
-
 
     <script>
         function nextStep(step) {
@@ -333,14 +376,13 @@
                     <input type="email" placeholder="Correo electrónico">
                     <button>→</button>
                 </div>
-                <div class="social-icons">
-                    <a href="#"><span class="bxl--facebook"></span></a>
-                    <a href="#"><span class="bxl--instagram"></span></a>
-                    <a href="#"><span class="bxl--tiktok"></span></a>
-                    <a href="#"><span class="bxl--youtube"></span></a>
-                    <a href="#"><span class="bxl--messenger"></span></a>
-                    <a href="#"><span class="bxl--pinterest-alt"></span></a>
-                    
+                <div class="social-icons">                    
+                    <a href="https://www.facebook.com/leonorastudiomx"><span class="bxl--facebook"></span></a>
+                    <a href="https://www.instagram.com/leonorastudiomx/"><span class="bxl--instagram"></span></a>
+                    <a href="https://www.tiktok.com/@leonorastudiomx"><span class="bxl--tiktok"></span></a>
+                    <a href="https://www.youtube.com/channel/UCU0E106LOkNgEnTcAcXOd3Q"><span class="bxl--youtube"></span></a>
+                    <a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F1535652286496294%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0"><span class="bxl--messenger"></span></a>
+                    <a href="https://uk.pinterest.com/leonorastudiomx/"><span class="bxl--pinterest-alt"></span></a>                    
                 </div>
             </div>
         </div>
