@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LEONORA - Salón de Belleza Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="images/Adobe Express - file.png" alt="">
+            </div>
+            <form id="registroForm">
+                <h3>FORMULARIO DE INSCRIPCIÓN</h3>
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Nombre" class="form-control" required>
+                    <input type="text" id="apellidos" placeholder="Apellidos" class="form-control" required>
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" id="usuario" placeholder="Usuario" class="form-control" required>
+                    <i class="zmdi zmdi-account"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="email" id="correo" placeholder="Correo electrónico" class="form-control" required>
+                    <i class="zmdi zmdi-email"></i>
+                </div>
+                <div class="form-wrapper">
+                    <select id="genero" class="form-control" required>
+                        <option value="" disabled selected>Género</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                        <option value="other">Otros</option>
+                    </select>
+                    <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="password" id="contraseña" placeholder="Contraseña" class="form-control" required>
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="password" id="confirmarContraseña" placeholder="Confirmar contraseña" class="form-control" required>
+                    <i class="zmdi zmdi-lock"></i>
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" id="telefono" placeholder="Teléfono" class="form-control" required>
+                    <i class="zmdi zmdi-phone"></i>
+                </div>
+                <button type="submit">
+                    Registrar
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', async (event) => {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            const nombre = document.getElementById('nombre').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const usuario = document.getElementById('usuario').value;
+            const correo = document.getElementById('correo').value;
+            const genero = document.getElementById('genero').value;
+            const contraseña = document.getElementById('contraseña').value;
+            const confirmarContraseña = document.getElementById('confirmarContraseña').value;
+            const telefono = document.getElementById('telefono').value;
+
+            try {
+                const response = await fetch('/registrar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ nombre, apellidos, usuario, correo, genero, contraseña, confirmarContraseña, telefono }),
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    alert('Usuario registrado con éxito');
+                    window.location.href = '/index.html'; // Redirige después del registro
+                } else {
+                    alert('Error al registrar usuario: ' + data.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al conectar con el servidor');
+            }
+        });
+    </script>
+</body>
+</html>

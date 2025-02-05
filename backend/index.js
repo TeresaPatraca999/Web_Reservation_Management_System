@@ -3,6 +3,7 @@ const path = require('path');
 const sequelize = require('./database');  // Conexión a la BD
 const Payment = require('./Payment');       // Modelo de Payment
 const Cita = require('./Cita');           // Modelo de Cita
+const Usuario = require('./Usuario'); // Asegúrate de importar esto
 const app = express();
 const port = 3000;
 const cors = require('cors');
@@ -12,12 +13,48 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+// Ruta para indexLogin.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'indexLogin.html'));
+});
+
+
 // Servir archivos estáticos desde el directorio actual
 app.use(express.static(__dirname));
 
-// Ruta para index.html
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+// Ruta para manejar el registro de usuarios
+app.post('/registrar', async (req, res) => {
+  const { nombre, apellidos, usuario, correo, genero, contraseña, confirmarContraseña, telefono } = req.body;
+
+  // Validar que las contraseñas coincidan
+  if (contraseña !== confirmarContraseña) {
+    return res.status(400).json({ error: 'Las contraseñas no coinciden' });
+  }
+
+  try {
+    // Verificar si el usuario ya existe
+    const existingUser = await Usuario.findOne({ where: { usuario } });
+
+    if (existingUser) {
+        return res.status(400).json({ error: 'El nombre de usuario ya existe' });
+    }
+    // Crear un nuevo usuario en la base de datos
+    const nuevoUsuario = await Usuario.create({
+      nombre,
+      apellidos,
+      usuario,
+      correo,
+      genero,
+      contraseña,
+      telefono,
+    });
+
+    res.status(201).json({ message: 'Usuario registrado', usuario: nuevoUsuario });
+  } catch (error) {
+    console.error('Error al registrar usuario:', error);
+    res.status(500).json({ error: 'Error al registrar usuario' });
+  }
 });
 
 // Endpoint para guardar el pago (Información del formulario)
